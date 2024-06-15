@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Modifier">
+
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        tools:ignore="MissingConstraints">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:title="Todo App"
+            app:titleMarginTop="20dp"
+            app:titleTextColor="#E5FFFFFF"
+            android:background="@color/gray1"
+            ></androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="-150dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="100dp"
+            android:text="Modifier"
+            android:id="@+id/modifier"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/tache_modif"
+            android:layout_below="@+id/modifier"
+            android:layout_marginTop="30dp"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/background_border"
+            android:hint="  Nouvelle tache" />
+
+
+        <EditText
+            android:id="@+id/description_modif"
+            android:layout_below="@+id/tache_modif"
+            android:layout_marginTop="30dp"
+            android:layout_width="350dp"
+            android:layout_height="250dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/background_border"
+
+            />
+
+
+        <Button
+            android:id="@+id/modif_button"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/description_modif"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:paddingVertical="10dp"
+            android:backgroundTint="@color/gray1"
+            android:textSize="25dp"
+            android:text="Modifier" />
+
+
+        <TextView
+            android:id="@+id/statut2"
+            android:layout_width="110dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="100dp"
+            android:layout_toEndOf="@id/modifier"
+            android:text="  Status"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinner_modif"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-35dp"
+            android:layout_marginTop="100dp"
+            android:layout_toEndOf="@id/statut2"
+
+            />
+
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/go_main_Button"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="38dp"
+        android:layout_marginRight="15dp"
+        android:clickable="true"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/white"
+        android:backgroundTint="@color/gray1"
+        app:maxImageSize="40dp"
+        android:src="@drawable/outline_close_24"
+        />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
